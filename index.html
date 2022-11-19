@@ -1,56 +1,67 @@
 
 <!DOCTYPE html>
 <html>
-<style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
 
-.header {
-  text-align: center;
-  padding: 32px;
-}
+<head>
+    <title>Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    function imageHack() {
+      var elements = document.getElementsByClassName("column");
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "25%";
+      }
+    }
+    window.onload = imageHack;
+    </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.column img {
-  margin-top: 12px;
-}
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+
+    .column img {
+      margin-top: 12px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+  
 <body>
 
 <!-- Header -->
-<div class="header">
+<!-- <div class="header">
   <h1>Image Grid</h1>
-</div>
+</div> -->
 
 <!-- Photo Grid -->
 <div class="row"> 
   <div class="column">
   <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-  <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
   </div>
   <div class="column">
   <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
@@ -82,13 +93,3 @@ body {
 </body>
 </html>
 
-
-<script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-for (i = 0; i < elements.length; i++) {
-  elements[i].style.flex = "25%";
-}
-
-</script>
