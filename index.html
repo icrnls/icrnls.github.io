@@ -44,6 +44,19 @@ var keyHandler = function (event) {
 // Listen for keydown events
 document.addEventListener('keydown', keyHandler, false);
     </script>
+	<style>
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+	</style>
 </head>
   
 <body>
@@ -56,7 +69,7 @@ document.addEventListener('keydown', keyHandler, false);
 </div>
  
 <div class="header">
- <video controls loop>
+ <video controls loop id="myVideo">
   <source src="SKULLSMALL.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
