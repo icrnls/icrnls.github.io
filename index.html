@@ -36,7 +36,13 @@ var keyHandler = function (event) {
 	// If complete, alert and reset
 	if (pattern.length === current) {
 		current = 0;
-		window.alert('Email me your public key bro!');
+		window.alert('Download and unlock me!');
+
+		document.getElementById('image')
+                    .style.display = "block";
+
+		document.getElementById('myVideo')
+                    .style.display = "none";
 	}
 
 };
@@ -55,11 +61,17 @@ document.addEventListener('keydown', keyHandler, false);
   min-height: 100%;
 }
 
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
 
 	</style>
 </head>
   
 <body>
+ <img id="image" src="./stegano.png"/>
+
  <video autoplay loop controls id="myVideo">
   <source src="SKULLSMALL.mp4" type="video/mp4">
   Your browser does not support the video tag.
